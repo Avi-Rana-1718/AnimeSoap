@@ -1,0 +1,75 @@
+
+#main {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#main h4 {
+    font-family: 'Manrope', sans-serif;
+}
+#content {
+    width: 50vw;
+}
+#breadcrumb a{
+    cursor: pointer;
+}
+#videoDiv {
+        color: #000;
+        background-color: #f3f3f3;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+}
+#vid {
+    width: 100%;
+    height: 100vh;
+    max-height: 55vh;
+    margin: 0;
+    border-radius: 5px;
+}
+#sourceDiv {
+    background-color: #f3f3f3;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+#source {
+    list-style-type: none;
+    padding: 5px;
+    margin: 5px;
+}
+#source li {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 4px;
+    font-size: small;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+}
+#episodeNav {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+}
+#episodeNav a {
+    color: #7047EB;
+    font-size: larger;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:800px) {
+#main {
+    flex-direction: column;
+}
+#content {
+    width: 100%;
+}
+#source li {
+}
+                 }
