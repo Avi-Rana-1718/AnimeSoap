@@ -14,7 +14,14 @@ if(localStorage.getItem("localAnime")!=null) {
             li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${res.id}"><img src="${res.img}"><section><span>${res.title}</span></section></a>`);
         ul.appendChild(li);
             j++;
-        });
+        }).catch((error) => {
+            console.log(error);
+            var ul = document.getElementById("watchlist");
+            var li = document.createElement("li");
+            li.setAttribute("style", `order:` + j);
+            li.insertAdjacentHTML('beforeend', `Error fetching anime.`);
+        ul.appendChild(li);
+          });
     }
 } else {
     document.getElementById("watchlistDiv").style.display = "none";

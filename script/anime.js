@@ -36,7 +36,10 @@ var totalEp, title;
             ul.appendChild(li);
         }
         
-    });
+    }).catch((error) => {
+        console.log(error);
+        document.write(error);
+      });
 
 
     function animeProgress() {
