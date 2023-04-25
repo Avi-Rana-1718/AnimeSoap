@@ -45,7 +45,6 @@ header div a:hover {
     }
     #watchlist a {
         text-decoration: none;
-        color: #000;
     }
     #watchlist li {
         width: 170px;
@@ -79,6 +78,7 @@ header div a:hover {
         overflow: hidden;
         display: inline;
         text-overflow: ellipsis;
+        color: #fff;
         max-width: 150px;
     }
     #watchlist li button {

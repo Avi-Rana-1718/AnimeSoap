@@ -5,7 +5,6 @@ header {
     padding: 5px;
 } */
 #main {
-    background-color: #fff;
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -62,12 +61,12 @@ header {
 #list li {
     min-width: 50px;
     text-align: center;
-    background-color: #f3f3f3;
+    background-color: #242424;
     border-radius: 4px;
     list-style-type: none;
     margin: 4px;
     padding: 4px 6px;
-    color: black;
+    color: #fff;
     cursor: pointer;
 }
 #title {
