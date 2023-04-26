@@ -9,10 +9,10 @@
       }
     ],
     "id":"animesoap",
-    "start_url": "http://127.0.0.1:5500/",
+    "start_url": "https://avi-rana-1718.github.io/AnimeSoap/",
     "background_color": "#7047EB",
     "display": "standalone",
-    "scope": "http://127.0.0.1:5500/",
+    "scope": "https://avi-rana-1718.github.io/AnimeSoap/",
     "theme_color": "#7047EB",
     "description": "Anime",
     "screenshots": [
