@@ -56,8 +56,9 @@ header div a:hover {
         margin:5px;
     }
     #watchlist li:hover {
-    text-decoration: underline;
-    
+        background-color: #242424;
+        text-decoration: underline;
+         
     }
     #watchlist li section {
         width: 150px;

@@ -1,0 +1,44 @@
+{
+    "short_name": "Animesoap",
+    "name": "Animesoap",
+    "icons": [
+      {
+        "src": "../logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id":"animesoap",
+    "start_url": "http://127.0.0.1:5500/",
+    "background_color": "#7047EB",
+    "display": "standalone",
+    "scope": "http://127.0.0.1:5500/",
+    "theme_color": "#7047EB",
+    "description": "Anime",
+    "screenshots": [
+      {
+        "src": "/pwa/index.png",
+        "type": "image/png",
+        "sizes": "414x896",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/pwa/search1.png",
+        "type": "image/png",
+        "sizes": "414x896",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/pwa/search2.png",
+        "type": "image/png",
+        "sizes": "414x896",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/pwa/anime.png",
+        "type": "image/png",
+        "sizes": "414x896",
+        "form_factor": "narrow"
+      }
+    ]
+  }
