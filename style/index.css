@@ -48,7 +48,7 @@ header div a:hover {
         text-decoration: none;
     }
     #watchlist li, #popularList li {
-        width: 170px;
+        width: 10rem;
         display: flex;
         border-radius: 5px;
         height: 250px;
