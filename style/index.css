@@ -36,17 +36,16 @@ header div a:hover {
     font-family: 'Manrope', sans-serif;
 }
 
-#watchlist {
+#watchlist, #popularList {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    white-space: nowrap;
+    flex-wrap: wrap;
+    
     }
-    #watchlist a {
+    #watchlist a, #popularList a {
         text-decoration: none;
     }
-    #watchlist li {
+    #watchlist li, #popularList li {
         width: 170px;
         display: flex;
         border-radius: 5px;
@@ -60,20 +59,20 @@ header div a:hover {
         text-decoration: underline;
          
     }
-    #watchlist li section {
+    #watchlist li section, #popularList li section {
         width: 150px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    #watchlist li img {
+    #watchlist li img, #popularList li img {
         width: 150px;
         border-radius: 5px;
         display: block;
         align-self: center;
         height: 210px;
     }
-    #watchlist li span {
+    #watchlist li span, #popularList li span {
         white-space: nowrap;
         text-decoration: none;
         overflow: hidden;

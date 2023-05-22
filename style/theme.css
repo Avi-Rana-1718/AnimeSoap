@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Sora', sans-serif;
-    background-color: #121212;
+    background-color: #2B2D2E;
     color: #fff;
 }
 #brand {
@@ -46,8 +46,8 @@ i:hover, a:hover {
 }
 #main {
     padding: 10px;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 @media only screen and (max-width:800px) {
