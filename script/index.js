@@ -1,3 +1,4 @@
+function load() {
 var data;
 
 if(localStorage.getItem("localAnime")!=null) {
@@ -54,3 +55,4 @@ fetch(`https://animeapi.avirana2.repl.co/popular?id=1`)
             li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${data[i]}">${data[i]}</a>`);
         ul.appendChild(li);
           });
+        }

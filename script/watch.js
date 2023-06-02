@@ -2,6 +2,7 @@ let searchParams = new URLSearchParams(window.location.search);
 var id = searchParams.get('id');
 var ep= parseInt(searchParams.get('ep'));
 
+function load() {
 
 if((localStorage.getItem("localAnime")!=null) && (localStorage.getItem("localAnime").includes(id)!=true)) {
     localStorage.setItem('localAnime', localStorage.getItem("localAnime")+ `,${id}`);
@@ -51,4 +52,5 @@ localStorage.setItem(`${id}-epNumber`, ep);
 function set(video) {
     document.getElementById("vid").src=video;
 
+}
 }

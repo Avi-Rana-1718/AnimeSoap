@@ -1,6 +1,8 @@
 let searchParams = new URLSearchParams(window.location.search);
 var id = searchParams.get('id');
-   
+
+function load() {
+
 var totalEp, title;
 
 
@@ -54,3 +56,4 @@ var totalEp, title;
             window.location.href=`watch.html?id=${title}&ep=${localStorage.getItem(`${id}-epNumber`)}`;
         }
     }
+}
