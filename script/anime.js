@@ -42,7 +42,7 @@ var totalEp, title;
         console.log(error);
         document.write(error);
       });
-
+    }
 
     function animeProgress() {
         localStorage.setItem(`${id}-epNumber`,)
@@ -56,4 +56,3 @@ var totalEp, title;
             window.location.href=`watch.html?id=${title}&ep=${localStorage.getItem(`${id}-epNumber`)}`;
         }
     }
-}
