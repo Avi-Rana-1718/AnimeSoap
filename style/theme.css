@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 100s;
+}
+
 body {
     font-family: 'Sora', sans-serif;
-    background-color: #2B2D2E;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 #brand {
     font-size: large;
     color: #fff;
 }
-#brand span {
-    color: #7047EB;
-}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #7047EB;
 }
 nav ul {
     list-style-type: none;
@@ -48,6 +52,13 @@ i:hover, a:hover {
     padding: 10px;
     margin-left: 15vw;
     margin-right: 15vw;
+}
+dialog:modal {
+    scale: 2;
+    border: none;
+}
+dialog i {
+    font-size: 4em;
 }
 
 @media only screen and (max-width:800px) {

@@ -57,8 +57,8 @@ header div a:hover {
         margin:5px;
         
     }
-    #watchlist li:hover {
-        background-color: #242424;
+    #watchlist li:hover, #popularList li:hover {
+        background-color: #E8E8E8;
         text-decoration: underline;
          
     }
@@ -81,7 +81,7 @@ header div a:hover {
         overflow: hidden;
         display: inline;
         text-overflow: ellipsis;
-        color: #fff;
+        color: #000;
         max-width: 150px;
     }
     #watchlist li button {

@@ -1,15 +1,15 @@
 let searchParams = new URLSearchParams(window.location.search);
-var id = searchParams.get('id');
+let id = searchParams.get('id');
 
-function load() {
+async function load() {
 
-var totalEp, title;
+let totalEp, title;
 
 
-   fetch(`https://animeapi.avirana2.repl.co/info?id=${id}`)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
+   let res = await fetch(`https://animeapi.avirana2.repl.co/info?id=${id}`);
+   let data = await res.json();
+
+   if(res.ok) {
         document.getElementById("title").innerHTML = data.title;
         document.getElementById("totalEp").innerHTML= 'Total episodes: ' + data.totalEpisodes;
         document.getElementById("status").innerHTML= 'Status: ' + data.status;
@@ -27,9 +27,9 @@ var totalEp, title;
         title=data.id;
         totalEp = data.totalEpisodes;
         
-        for(var i=1;i<=totalEp;i++) {
-            var ul = document.getElementById("list");
-            var li = document.createElement("li");
+        for(let i=1;i<=totalEp;i++) {
+            let ul = document.getElementById("list");
+            let li = document.createElement("li");
             if(localStorage.getItem(`${id}-epNumber`)>=i) {
                 li.setAttribute("style", `background-color:#7047EB;color:#fff;`);
             }
@@ -37,12 +37,11 @@ var totalEp, title;
             li.appendChild(document.createTextNode(i));
             ul.appendChild(li);
         }
-        
-    }).catch((error) => {
+    } else {
         console.log(error);
         document.write(error);
-      });
     }
+}
 
     function animeProgress() {
         localStorage.setItem(`${id}-epNumber`,)

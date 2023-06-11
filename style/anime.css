@@ -61,12 +61,12 @@ header {
 #list li {
     min-width: 50px;
     text-align: center;
-    background-color: #242424;
+    background-color: #E8E8E8;
     border-radius: 4px;
     list-style-type: none;
     margin: 4px;
     padding: 4px 6px;
-    color: #fff;
+    color: #000;
     cursor: pointer;
 }
 #title {

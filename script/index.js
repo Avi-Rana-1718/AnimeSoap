@@ -1,38 +1,36 @@
-function load() {
-var data;
+let ul = document.getElementById("watchlist");
 
+
+async function load() {
+let data;
 if(localStorage.getItem("localAnime")!=null) {
     data = localStorage.getItem("localAnime").split(",");
+    console.log(data.length);
 
-    var j=0;
-console.log(data);
+    let j=0;
 
     for(i=0;i<data.length;i++) {
-        fetch(`https://animeapi.avirana2.repl.co/info?id=${data[i]}`)
-        .then((response) => response.json())
-        .then((res) => {
-            var ul = document.getElementById("watchlist");
-            var li = document.createElement("li");
-            li.setAttribute("style", `order:` + j);
-            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${res.id}"><img src="${res.img}"><section><span>${res.title}</span></section></a>`);
-        ul.appendChild(li);
-            j++;
-        }).catch((error) => {
+        let res = await fetch(`https://animeapi.avirana2.repl.co/info?id=${data[i]}`);
+        let resjson = await res.json();
+
+        if(!res.ok) {
             console.log(error);
-            var ul = document.getElementById("watchlist");
-            var li = document.createElement("li");
+            let li = document.createElement("li");
             li.setAttribute("style", `order:` + j);
             li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${data[i]}">${data[i]}</a>`);
+            ul.appendChild(li);
+        } else {
+            let li = document.createElement("li");
+            li.setAttribute("style", `order:` + j);
+            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${resjson.id}"><img src="${resjson.img}"><section><span>${resjson.title}</span></section></a>`);
         ul.appendChild(li);
-          });
+            j++;
+        }
     }
 } else {
     document.getElementById("watchlistDiv").style.display = "none";
 }
-
-
-
-console.log(localStorage.getItem("localAnime"));
+console.log(localStorage.getItem("localAnime"))
 
 
 
