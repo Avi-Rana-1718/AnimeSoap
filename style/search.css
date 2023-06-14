@@ -9,8 +9,8 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 6px;
-    color:#fff;
-    background-color: #222222;
+    color:#000;
+    background-color: #E8E8E8;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     width: 50vw;
 }
@@ -34,7 +34,7 @@ flex-wrap: wrap;
 }
 #searchResults a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 #searchResults li {
     width: 170px;
@@ -43,14 +43,13 @@ flex-wrap: wrap;
     padding: 5px;
     text-align: center;
     margin:5px;
-
+    background-color: #E8E8E8;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
 }
 #searchResults li:hover {
-background-color: #242424;
 text-decoration: underline;
 
 }
@@ -62,7 +61,7 @@ text-decoration: underline;
 }
 #searchResults li span {
     white-space: nowrap;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     overflow: hidden;
     display: inline;

@@ -1,10 +1,9 @@
 let searchParams = new URLSearchParams(window.location.search);
 let id = searchParams.get('id');
 
-async function load() {
-
 let totalEp, title;
 
+async function load() {
 
    let res = await fetch(`https://animeapi.avirana2.repl.co/info?id=${id}`);
    let data = await res.json();
