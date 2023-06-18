@@ -10,6 +10,9 @@ body {
     background-color: #fff;
     color: #000;
 }
+i {
+    margin: 5px;
+}
 #brand {
     font-size: large;
     color: #fff;

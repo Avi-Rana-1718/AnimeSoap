@@ -17,7 +17,7 @@ fetch(`https://animeapi.avirana2.repl.co/watch?id=${id}&ep=${ep}`)
 .then((data) => {
 
     
-    document.getElementById("vid").src= "https://" + data.servers[0].iframe;
+    document.getElementById("vid").src= data.servers[0].iframe;
     for(var i=0;i<data.servers.length;i++) {
         var ul = document.getElementById("source");
         var li = document.createElement("li");

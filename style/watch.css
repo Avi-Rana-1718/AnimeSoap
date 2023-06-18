@@ -16,6 +16,8 @@
 #videoDiv {
         color: #000;
         background-color: #E8E8E8;
+        display: flex;
+        flex-direction: column;
         padding: 10px;
         margin: 10px;
         border-radius: 5px;
@@ -26,6 +28,7 @@
     max-height: 55vh;
     margin: 0;
     border-radius: 5px;
+    overflow:hidden;
 }
 #sourceDiv {
     background-color: #E8E8E8;
