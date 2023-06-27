@@ -4,6 +4,52 @@ let ul = document.getElementById("watchlist");
 async function load() {
 let data;
 if(localStorage.getItem("localAnime")!=null) {
+
+    //recent
+fetch(`https://animeapi.avirana2.repl.co/recent?id=1`)
+.then((response) => response.json())
+.then((res) => {
+    for (let j=0;j<15;j++) {
+    var ul = document.getElementById("recentList");
+    var li = document.createElement("li");
+    li.setAttribute("style", `order:` + j);
+    let id = res[j].id.split("-episode-");
+    id=String(id[0]);
+    id=id.replace("/","");
+    li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${id}"><img src="${res[j].img}"><section><span>${res[j].title}</span></section></a>`);
+ul.appendChild(li);
+    }
+}).catch((error) => {
+    console.log(error);
+    var ul = document.getElementById("recentList");
+    var li = document.createElement("li");
+    li.setAttribute("style", `order:` + j);
+    li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${data[i]}">${data[i]}</a>`);
+ul.appendChild(li);
+  });
+
+//popular
+fetch(`https://animeapi.avirana2.repl.co/popular?id=1`)
+        .then((response) => response.json())
+        .then((res) => {
+            for (let j=0;j<15;j++) {
+            var ul = document.getElementById("popularList");
+            var li = document.createElement("li");
+            li.setAttribute("style", `order:` + j);
+            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${res[j].id}"><img src="${res[j].img}"><section><span>${res[j].title}</span></section></a>`);
+        ul.appendChild(li);
+            }
+        }).catch((error) => {
+            console.log(error);
+            var ul = document.getElementById("popularList");
+            var li = document.createElement("li");
+            li.setAttribute("style", `order:` + j);
+            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${data[i]}">${data[i]}</a>`);
+        ul.appendChild(li);
+          });
+
+
+
     data = localStorage.getItem("localAnime").split(",");
     console.log(data.length);
 
@@ -33,24 +79,7 @@ if(localStorage.getItem("localAnime")!=null) {
 console.log(localStorage.getItem("localAnime"))
 
 
-
-//popular
-fetch(`https://animeapi.avirana2.repl.co/popular?id=1`)
-        .then((response) => response.json())
-        .then((res) => {
-            for (let j=0;j<15;j++) {
-            var ul = document.getElementById("popularList");
-            var li = document.createElement("li");
-            li.setAttribute("style", `order:` + j);
-            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${res[j].id}"><img src="${res[j].img}"><section><span>${res[j].title}</span></section></a>`);
-        ul.appendChild(li);
-            }
-        }).catch((error) => {
-            console.log(error);
-            var ul = document.getElementById("popularList");
-            var li = document.createElement("li");
-            li.setAttribute("style", `order:` + j);
-            li.insertAdjacentHTML('beforeend', `<a href="anime.html?id=${data[i]}">${data[i]}</a>`);
-        ul.appendChild(li);
-          });
         }
+
+
+

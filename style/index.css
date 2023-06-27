@@ -36,7 +36,7 @@ header div a:hover {
     font-family: 'Manrope', sans-serif;
 }
 
-#watchlist, #popularList {
+#watchlist, #popularList, #recentList {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -44,10 +44,10 @@ header div a:hover {
     flex-wrap: wrap;
     
     }
-    #watchlist a, #popularList a {
+    #watchlist a, #popularList a, #recentList a {
         text-decoration: none;
     }
-    #watchlist li, #popularList li {
+    #watchlist li, #popularList li, #recentList li{
         width: 10rem;
         display: flex;
         border-radius: 5px;
@@ -57,25 +57,25 @@ header div a:hover {
         margin:5px;
         
     }
-    #watchlist li:hover, #popularList li:hover {
+    #watchlist li:hover, #popularList li:hover, #recentList li:hover {
         background-color: #E8E8E8;
         text-decoration: underline;
          
     }
-    #watchlist li section, #popularList li section {
+    #watchlist li section, #popularList li section, #recentList li section {
         width: 150px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    #watchlist li img, #popularList li img {
+    #watchlist li img, #popularList li img, #recentList li img {
         width: 150px;
         border-radius: 5px;
         display: block;
         align-self: center;
         height: 210px;
     }
-    #watchlist li span, #popularList li span {
+    #watchlist li span, #popularList li span, #recentList li span {
         white-space: nowrap;
         text-decoration: none;
         overflow: hidden;
